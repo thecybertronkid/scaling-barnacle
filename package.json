@@ -1,20 +1,14 @@
 {
   "name": "scaling-barnacle",
   "version": "1.0.0",
-  "description": "A static website deployed on Vercel with clean URL routing",
+  "description": "A static website deployed on Vercel",
   "main": "index.html",
   "scripts": {
-    "dev": "python3 router.py 8000",
-    "dev:basic": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
     "build": "echo 'Static site - no build step needed'",
-    "start": "python3 router.py 8000"
+    "start": "python3 -m http.server 8000"
   },
-  "keywords": [
-    "static-site",
-    "clean-urls",
-    "vercel",
-    "router"
-  ],
+  "keywords": [],
   "author": "",
   "license": "ISC"
 }
