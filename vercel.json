@@ -3,6 +3,34 @@
   "outputDirectory": ".",
   "rewrites": [
     {
+      "source": "/aboutus",
+      "destination": "/pages/aboutus.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/pages/contact.html"
+    },
+    {
+      "source": "/gallery",
+      "destination": "/pages/gallery.html"
+    },
+    {
+      "source": "/homepage",
+      "destination": "/pages/homepage.html"
+    },
+    {
+      "source": "/reports",
+      "destination": "/pages/reports.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/pages/services.html"
+    },
+    {
+      "source": "/vision",
+      "destination": "/pages/vision.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
