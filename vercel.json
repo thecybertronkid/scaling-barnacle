@@ -1,35 +1,7 @@
 {
-  "buildCommand": "echo 'Static site - no build needed'",
-  "outputDirectory": ".",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "rewrites": [
-    {
-      "source": "/aboutus",
-      "destination": "/pages/aboutus.html"
-    },
-    {
-      "source": "/contact",
-      "destination": "/pages/contact.html"
-    },
-    {
-      "source": "/gallery",
-      "destination": "/pages/gallery.html"
-    },
-    {
-      "source": "/homepage",
-      "destination": "/pages/homepage.html"
-    },
-    {
-      "source": "/reports",
-      "destination": "/pages/reports.html"
-    },
-    {
-      "source": "/services",
-      "destination": "/pages/services.html"
-    },
-    {
-      "source": "/vision",
-      "destination": "/pages/vision.html"
-    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
@@ -37,8 +9,12 @@
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/index.html",
       "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
         {
           "key": "X-Frame-Options",
           "value": "SAMEORIGIN"
@@ -58,6 +34,15 @@
         {
           "key": "Permissions-Policy",
           "value": "geolocation=(), microphone=(), camera=()"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     }
